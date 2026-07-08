@@ -119,7 +119,7 @@ The screenshots are used only to show:
 - sample log file
 - Python script output
 - risk register
-- final summary
+- closing summary
 
 ## Important Note
 
