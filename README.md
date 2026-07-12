@@ -37,16 +37,16 @@ In this project, I worked on the following areas:
 
 | File | Short description |
 |---|---|
-| [01-scenario-and-scope.md](01-scenario-and-scope.md) | Scenario and scope |
-| [02-learning-sources-map.md](02-learning-sources-map.md) | Connection with my learning path |
+| [01-project-overview.md](01-project-overview.md) | Scenario and scope |
+| [02-learning-map.md](02-learning-map.md) | Connection with my learning path |
 | [03-identity-access-review.md](03-identity-access-review.md) | User and access review |
-| [04-network-observation.md](04-network-observation.md) | Basic network observations |
-| [05-log-analysis.md](05-log-analysis.md) | Sample login logs |
+| [04-network-review.md](04-network-review.md) | Basic network observations |
+| [05-log-review.md](05-log-review.md) | Sample login log review |
 | [06-phishing-triage.md](06-phishing-triage.md) | Phishing email review |
 | [07-firewall-rule-review.md](07-firewall-rule-review.md) | Firewall rule review |
 | [08-python-log-helper.md](08-python-log-helper.md) | Python log helper explanation |
 | [09-risk-register.md](09-risk-register.md) | Risk table |
-| [10-final-summary.md](10-final-summary.md) | Short closing summary |
+| [10-summary.md](10-summary.md) | Short closing summary |
 
 ---
 
