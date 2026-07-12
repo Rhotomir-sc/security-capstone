@@ -2,22 +2,38 @@
 
 ## Purpose
 
-This section shows which previous learning areas supported this capstone.
+This section shows how this capstone connects with my cybersecurity learning path.
+
+The project combines topics that I studied in courses, hands-on labs, and beginner-level certification preparation.
 
 ## Learning Map
 
-| Capstone Area | Related Learning Source | How It Is Used |
-|---|---|---|
-| Identity review | Linux user management and permissions | Reviewing users, roles, and unnecessary accounts |
-| Network observation | Network basics, Wireshark, and Nmap practice | Understanding basic traffic, services, and exposure |
-| Log analysis | SOC and authentication log practice | Reviewing failed and successful login events |
-| Phishing triage | Phishing analysis practice | Checking suspicious sender, links, urgency, and credential requests |
-| Firewall rule review | Firewall and network security basics | Reviewing overly broad or unnecessary access rules |
-| Python log helper | Python programming course | Reading and summarizing sample log lines |
-| Risk register | GRC and security documentation basics | Turning observations into risk and recommendation format |
+| Learning Area | How it connects to this project |
+|---|---|
+| Cybersecurity fundamentals | Basic security review and findings |
+| Linux basics | Users, permissions, and log files |
+| Identity and access | Account review and least privilege |
+| Network basics | Simple network observations |
+| Log analysis | Login activity and failed attempts |
+| Phishing awareness | Suspicious email indicators |
+| Firewall basics | Rule review and access control |
+| Python basics | Simple log summary script |
+| Risk documentation | Risk register and final summary |
 
-## Note
+## Certification Connection
 
-This file connects previous learning to the capstone scenario.
+This project connects with topics from my current learning path, including:
 
-It does not claim professional experience. The goal is to show how basic learning areas can be combined into one small student-level security review.
+- Google Cybersecurity
+- Linux Essentials
+- Microsoft SC-900
+- Microsoft AZ-900
+- Cisco CyberOps
+- SIEM and log analysis basics
+- beginner network security practice
+
+## Short Note
+
+This file is not a certificate list.
+
+It only shows how the topics in this capstone are connected to the areas I am currently learning.
