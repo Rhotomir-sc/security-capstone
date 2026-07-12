@@ -2,23 +2,25 @@
 
 ## Scenario Name
 
-**Fictional Small Learning Environment Security Review**
+Fictional Small Learning Environment Security Review
 
-## Purpose
+## Scenario
 
-This section defines the fictional environment, the review goal, and the scope of the capstone.
+This project is based on a small fictional learning/lab environment.
+
+Real systems, real users, and real company data are not used. The scenario was created with sample data to practice basic security review steps.
 
 ## Environment
 
-The environment is a small fictional learning/lab setup with:
+The fictional lab environment includes:
 
-- student user accounts
+- sample user accounts
 - possible admin or test accounts
-- sample authentication logs
-- basic network observations
-- a sample phishing scenario
-- simple firewall rule examples
-- fictional log data for Python parsing
+- basic login logs
+- simple network notes
+- a phishing email example
+- firewall rule examples
+- sample log data for Python review
 
 ## Scope
 
@@ -26,23 +28,22 @@ This review focuses on:
 
 - user and access review
 - basic network observation
-- authentication log analysis
+- authentication log review
 - phishing triage
 - firewall rule review
-- simple Python log summarization
+- simple Python log summary
 - risk documentation
 
 ## Out of Scope
 
-This capstone does not include:
+This project does not include:
 
 - real company data
 - real user data
-- exploitation
-- vulnerability scanning against real targets
-- professional audit claims
-- advanced SIEM engineering
+- active exploitation
+- scanning real targets
+- professional audit work
 
-## Outcome
+## Short Note
 
-The goal is to document basic security observations in a clear and student-level way.
+This file defines the scenario and the limits of the project before moving into the review sections.
