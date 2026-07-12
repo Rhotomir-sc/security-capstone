@@ -1,145 +1,91 @@
 # Security Capstone
 
-## Overview
+## Fictional Small Learning Environment Security Review
 
-This repository contains a student-level security capstone based on a fictional small learning environment.
+This repository is a small capstone project that I prepared as part of my cybersecurity learning process.
 
-The goal of this capstone is to connect several basic cybersecurity topics into one organized review scenario. It brings together identity and access review, basic network observation, authentication log analysis, phishing triage, firewall rule review, simple Python log summarization, and risk documentation.
+Instead of using real systems, this project uses a fictional lab scenario created with sample data. The focus of this work is to perform a basic security review through user accounts, access levels, sample login logs, a phishing scenario, firewall rules, a Python log summary, and a risk register.
+
+---
 
 ## Scenario
 
-**Fictional Small Learning Environment Security Review**
+This project is based on a small fictional learning/lab environment.
 
-In this scenario, I review a small fictional learning/lab environment from a basic security perspective.
+The environment includes sample user accounts, basic login logs, simple network notes, a phishing email example, and firewall rule examples.
 
-The environment includes:
+I reviewed this environment from a basic security perspective and tried to write the main points in a short and organized way.
 
-- student user accounts
-- possible test or admin accounts
-- sample authentication logs
+---
+
+## Reviewed Areas
+
+In this project, I worked on the following areas:
+
+- user accounts and access levels
+- unnecessary or unclear permissions
 - basic network observations
-- a sample phishing scenario
-- simple firewall rule examples
-- fictional log data for Python-based summarization
+- login logs and failed login attempts
+- suspicious points in a phishing email
+- overly open access in firewall rules
+- sample log summary with Python
+- risk register and final summary
 
-## Purpose
+---
 
-The purpose of this capstone is not to perform a real penetration test, professional audit, or production security review.
+## File Guide
 
-The purpose is to show that I can:
-
-- follow a clear security review process
-- connect different learning areas into one scenario
-- document observations in a simple and organized way
-- think about basic identity, network, log, phishing, and firewall risks
-- convert findings into risk-based notes
-- use a small Python script to support log review
-
-## What This Capstone Covers
-
-- Identity and access review
-- Basic network observation
-- Authentication log analysis
-- Phishing triage
-- Firewall rule review
-- Python log summarization
-- Risk register
-- Final learning summary
-
-## Repository Structure
-
-| File / Folder | Purpose |
+| File | Short description |
 |---|---|
-| `01-scenario-and-scope.md` | Defines the fictional scenario, scope, and limits |
-| `02-learning-sources-map.md` | Shows which previous learning areas supported this capstone |
-| `03-identity-access-review.md` | Reviews basic user account and access risks |
-| `04-network-observation.md` | Documents simple network observations |
-| `05-log-analysis.md` | Reviews sample authentication log patterns |
-| `06-phishing-triage.md` | Reviews a sample suspicious email scenario |
-| `07-firewall-rule-review.md` | Checks basic firewall rule hygiene |
-| `08-python-log-helper.md` | Explains the small Python log helper script |
-| `09-risk-register.md` | Converts observations into a small risk table |
-| `10-final-summary.md` | Summarizes the final learning outcome |
-| `scripts/` | Contains the Python helper script |
-| `sample-logs/` | Contains fictional sample authentication logs |
-| `evidence/screenshots/` | Contains a small number of screenshots showing structure, sample data, script output, and final documentation |
+| [01-scenario-and-scope.md](01-scenario-and-scope.md) | Scenario and scope |
+| [02-learning-sources-map.md](02-learning-sources-map.md) | Connection with my learning path |
+| [03-identity-access-review.md](03-identity-access-review.md) | User and access review |
+| [04-network-observation.md](04-network-observation.md) | Basic network observations |
+| [05-log-analysis.md](05-log-analysis.md) | Sample login logs |
+| [06-phishing-triage.md](06-phishing-triage.md) | Phishing email review |
+| [07-firewall-rule-review.md](07-firewall-rule-review.md) | Firewall rule review |
+| [08-python-log-helper.md](08-python-log-helper.md) | Python log helper explanation |
+| [09-risk-register.md](09-risk-register.md) | Risk table |
+| [10-final-summary.md](10-final-summary.md) | Short closing summary |
 
-## Structure Logic
+---
 
-Although this capstone contains 10 files, the structure follows 3 main parts: an introduction section, a technical review section, and a closing section.
+## Python Section
 
-| Section | Files | Purpose |
-|---|---|---|
-| Introduction | `01-scenario-and-scope.md`, `02-learning-sources-map.md` | Defines the scenario, scope, limits, and learning sources |
-| Technical Review | `03-identity-access-review.md` to `08-python-log-helper.md` | Documents the main security review steps |
-| Closing | `09-risk-register.md`, `10-final-summary.md` | Converts observations into risks and summarizes the learning outcome |
+In this project, I used a small Python script:
 
-## Capstone Flow
+```text
+scripts/log_summary.py
+```
 
-The capstone follows a simple review flow:
+The script reads the sample log file and summarizes successful logins, failed login attempts, and users found in the log.
 
-1. Define the scenario and scope
-2. Connect the scenario to previous learning
-3. Review identity and access risks
-4. Observe the network side
-5. Analyze sample authentication logs
-6. Triage a suspicious email example
-7. Review firewall rule risks
-8. Use Python to summarize sample logs
-9. Convert findings into a risk register
-10. Write a final learning summary
+Sample log file:
 
-## Supporting Files
+```text
+sample-logs/auth_sample.log
+```
 
-### Python Helper
+This section was added to show how Python can help with simple log review tasks.
 
-The Python helper script is stored in `scripts/log_summary.py`.
+---
 
-It reads a fictional authentication log file and summarizes:
+## Evidence
 
-- successful login events
-- failed login events
-- users with repeated failed attempts
+Screenshots are stored in this folder:
 
-This script is intentionally simple. It is used to practice basic log parsing and Python-supported security review.
+```text
+evidence/screenshots/
+```
 
-### Sample Logs
+This folder includes screenshots of the repository structure, sample log file, Python output, risk register, and final summary section.
 
-The sample log file is stored in `sample-logs/auth_sample.log`.
-
-All log data in this repository is fictional and created only for this student-level scenario.
-
-### Evidence
-
-Screenshots are stored in `evidence/screenshots/`.
-
-The screenshots are used only to show:
-
-- repository structure
-- sample log file
-- Python script output
-- risk register
-- closing summary
-
-## Important Note
-
-This project does not use real company data, real user data, or real production systems.
-
-It is a controlled student portfolio project built with fictional examples.
-
-This capstone is not presented as:
-
-- a real penetration test
-- a professional audit
-- an enterprise security assessment
-- an advanced SIEM project
-
-## Learning Outcome
-
-This capstone helped me practice connecting separate cybersecurity topics into one small security review process.
-
-The main learning outcome is that security work is not only about identifying issues. It is also about documenting observations clearly, understanding basic risk, and suggesting practical improvements.
+---
 
 ## Status
 
-This repository is part of my cybersecurity learning portfolio and supports my long-term direction toward cloud and identity security.
+Status: `In progress`
+
+This project is one of the small but organized capstone works in my cybersecurity portfolio.
+
+In this repository, I combined the basic topics I learned into a small scenario and tried to write my review in an organized way.
