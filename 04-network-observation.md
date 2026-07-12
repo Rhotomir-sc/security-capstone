@@ -2,30 +2,34 @@
 
 ## Purpose
 
-This section documents basic network observations for the fictional learning environment.
+This section documents basic network observations in the fictional lab environment.
 
-## What I Checked
+The goal is not to perform an advanced network assessment. The goal is to understand which systems exist and which access points may need review.
 
-- visible hosts or services
-- basic connectivity
-- unnecessary exposed services
-- simple traffic observation notes
-- relationship between network exposure and security risk
+## Sample Network Notes
 
-## Example Observation Table
+| Asset | Example |
+|---|---|
+| Lab network | `192.168.10.0/24` |
+| Gateway | `192.168.10.1` |
+| Student workstation | `192.168.10.20` |
+| Admin workstation | `192.168.10.10` |
+| Lab server | `192.168.10.50` |
 
-| Observation | Meaning | Risk Level | Recommendation |
-|---|---|---|---|
-| SSH-like service visible | Remote access may be available | Medium | Limit access and monitor login attempts |
-| Web service visible | A learning web service may be running | Low | Keep service updated and monitored |
-| Unknown service | Service purpose is unclear | Medium | Identify and remove if unnecessary |
+## Observations
 
-## Student Note
+| Observation | Note |
+|---|---|
+| Student and admin systems are in the same small network | Acceptable for a lab, but should be reviewed in real environments |
+| The lab server is reachable inside the lab network | Access should be limited to users or systems that need it |
+| No separate guest network is shown in this scenario | Guest access should be controlled more carefully |
 
-This is a basic observation section, not an advanced network assessment.
+## Suggested Actions
 
-The goal is to understand how simple network visibility can relate to security review.
+- Review which systems need access to the lab server.
+- Limit admin-related access where possible.
+- Avoid giving guest users broad internal access.
 
-## Outcome
+## Learning Connection
 
-The network side should be understood enough to connect exposed services with possible security risks.
+This section helped me practice basic network observation, asset awareness, and access control thinking.
