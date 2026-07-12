@@ -2,22 +2,11 @@
 
 ## Purpose
 
-This section explains a small Python helper script used to summarize sample authentication logs.
+This section explains the small Python helper script used in this project.
 
-## Related Files
+The script was added to show how Python can support a simple log review task.
 
-- `scripts/log_summary.py`
-- `sample-logs/auth_sample.log`
+## Script Location
 
-## What the Script Does
-
-The script reads a fictional sample log file and counts:
-
-- successful login events
-- failed login events
-- users with repeated failed attempts
-
-## Example Command
-
-```bash
-python scripts/log_summary.py
+```text
+scripts/log_summary.py
