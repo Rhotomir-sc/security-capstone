@@ -2,31 +2,36 @@
 
 ## Purpose
 
-This section reviews basic firewall rule risks in the fictional learning environment.
+This section reviews simple firewall rule examples in the fictional lab environment.
 
-## Review Questions
+The goal is to check whether some access rules are too broad or unnecessary.
 
-- Is the rule too broad?
-- Does the rule allow unnecessary access?
-- Is the source limited?
-- Is the destination clear?
-- Is the port or service necessary?
-- Is there a clear reason for the rule?
+## Sample Firewall Rules
 
-## Example Rule Review
+| Rule | Source | Destination | Port | Action | Note |
+|---|---|---|---|---|---|
+| FW-01 | Student network | Lab server | 80 | Allow | Looks acceptable |
+| FW-02 | Student network | Lab server | 22 | Allow | Too broad |
+| FW-03 | Admin workstation | Lab server | 22 | Allow | More appropriate |
+| FW-04 | Guest user | Lab server | Any | Allow | Risky |
 
-| Rule | Observation | Risk Level | Recommendation |
-|---|---|---|---|
-| Allow any to SSH | Too broad | High | Restrict source IPs |
-| Allow internal web access | Expected rule | Low | Keep monitored |
-| Old test rule | No clear purpose | Medium | Remove if unused |
+## Findings
 
-## Student Note
+| Finding | Risk | Suggested Action |
+|---|---|---|
+| SSH access is allowed from the full student network | Too many users may reach an admin service | Allow SSH only from the admin workstation |
+| Guest user has broad access to the lab server | Guest access may expose internal resources | Deny or strongly restrict guest access |
 
-The goal is to understand basic firewall rule hygiene.
+## Notes
 
-This is not an enterprise firewall policy design. It is a simple student-level review of fictional firewall examples.
+Firewall rules should be simple, clear, and limited to what is needed.
 
-## Outcome
+A rule should answer:
 
-Firewall rules should be limited, documented, and reviewed regularly.
+- who needs access
+- which service is needed
+- whether the access is too broad
+
+## Learning Connection
+
+This section helped me practice firewall rule review, least privilege, and basic network access control.
