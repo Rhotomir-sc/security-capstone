@@ -1,22 +1,5 @@
 from pathlib import Path
-from collections import Counter
-
-
-def parse_log_line(line):
-    """
-    Parses a simple key=value log line.
-    Example:
-    2026-07-07 10:05:44 user=testadmin action=login status=failed
-    """
-    parts = line.strip().split()
-    data = {}
-
-    for part in parts:
-        if "=" in part:
-            key, value = part.split("=", 1)
-            data[key] = value
-
-    return data
+import re
 
 
 def main():
@@ -26,31 +9,36 @@ def main():
         print("Log file not found.")
         return
 
+    lines = [
+        line.strip()
+        for line in log_path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+
     successful_logins = 0
     failed_logins = 0
-    failed_users = Counter()
+    users = set()
 
-    with log_path.open("r", encoding="utf-8") as file:
-        for line in file:
-            data = parse_log_line(line)
+    for line in lines:
+        if "login_success" in line:
+            successful_logins += 1
 
-            user = data.get("user", "unknown")
-            status = data.get("status", "unknown")
+        if "login_failed" in line:
+            failed_logins += 1
 
-            if status == "success":
-                successful_logins += 1
-            elif status == "failed":
-                failed_logins += 1
-                failed_users[user] += 1
+        user_match = re.search(r"user=([a-zA-Z0-9_.-]+)", line)
+        if user_match:
+            users.add(user_match.group(1))
 
-    print("Authentication Log Summary")
-    print("--------------------------")
+    print("Log Summary")
+    print("-----------")
+    print(f"Total lines reviewed: {len(lines)}")
     print(f"Successful logins: {successful_logins}")
-    print(f"Failed logins: {failed_logins}")
+    print(f"Failed login attempts: {failed_logins}")
+    print(f"Users found: {', '.join(sorted(users))}")
 
-    print("\nUsers with failed attempts:")
-    for user, count in failed_users.items():
-        print(f"- {user}: {count}")
+    if failed_logins >= 3:
+        print("Note: Repeated failed logins should be reviewed.")
 
 
 if __name__ == "__main__":
