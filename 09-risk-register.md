@@ -2,24 +2,35 @@
 
 ## Purpose
 
-This section converts observations from the capstone into a small risk register.
+This section lists the main findings from the fictional lab review.
+
+The goal is to organize each finding with a simple risk level and suggested action.
 
 ## Risk Register
 
-| ID | Finding | Risk Level | Impact | Recommendation |
+| ID | Finding | Risk Level | Suggested Action | Status |
 |---|---|---|---|---|
-| R-01 | Test admin account exists | Medium | Unnecessary privileged access | Remove or disable if not needed |
-| R-02 | Multiple failed logins detected | Medium | Possible guessing attempt | Monitor and review account activity |
-| R-03 | Suspicious phishing link found | High | Credential theft risk | Report and block the email |
-| R-04 | Broad firewall rule exists | High | Unnecessary network exposure | Restrict source and service |
-| R-05 | Guest account enabled | Low | Unused access path | Disable if not required |
+| R-01 | Unclear admin account | Medium | Review the account owner and remove admin access if not needed | Open |
+| R-02 | Guest account may be unused | Low | Disable or remove the account if it is not required | Open |
+| R-03 | Repeated failed login attempts | Medium | Review the login activity and confirm if it is expected | Open |
+| R-04 | SSH access is too broad | Medium | Limit SSH access to the admin workstation | Open |
+| R-05 | Guest access to lab server is too open | High | Deny or strongly restrict guest access | Open |
+| R-06 | Phishing email asks for credentials | High | Report the email and block or review the sender | Open |
 
-## Student Note
+## Risk Level Notes
 
-The goal is to practice converting technical observations into risk-based documentation.
+| Level | Meaning |
+|---|---|
+| Low | Should be reviewed |
+| Medium | Should be fixed |
+| High | Should be prioritized |
 
-This is a simple student-level risk register based on fictional examples.
+## Short Note
 
-## Outcome
+This risk register helped me collect the main findings in one place.
 
-Security findings become more useful when they are connected to risk level, impact, and recommendation.
+It also made the review easier to understand because each issue has a risk level and a suggested action.
+
+## Learning Connection
+
+This section helped me practice basic risk documentation, prioritization, and clear security reporting.
