@@ -2,30 +2,33 @@
 
 ## Purpose
 
-This section reviews basic identity and access risks in the fictional learning environment.
+This section reviews sample user accounts and access levels in the fictional lab environment.
 
-## Review Questions
+The goal is to check whether each account has a clear purpose and whether the access level looks reasonable.
 
-- Are user accounts clearly named?
-- Are admin accounts limited?
-- Is there any unnecessary test or guest account?
-- Are permissions appropriate for student-level users?
-- Are inactive or unused accounts visible?
+## Sample Accounts
 
-## Example Observations
-
-| Item | Observation | Risk Level | Note |
+| Account | Role | Access Level | Note |
 |---|---|---|---|
-| Test admin account | A test admin account exists | Medium | Should be reviewed or removed if not needed |
-| Guest account | Guest account is enabled | Low | Should be disabled if it is not required |
-| Student users | Normal student accounts have limited access | Low | Acceptable for this scenario |
+| `student01` | Student user | Standard | Looks normal |
+| `student02` | Student user | Standard | Looks normal |
+| `labadmin` | Lab admin | Admin | Expected admin account |
+| `testadmin` | Test account | Admin | Purpose is unclear |
+| `guest01` | Guest user | Standard | Should be reviewed |
 
-## Student Note
+## Findings
 
-The goal is not to perform a full IAM audit.
+| Finding | Risk | Suggested Action |
+|---|---|---|
+| `testadmin` has admin access, but its purpose is unclear | Unnecessary privileged access | Review the account and remove admin access if not needed |
+| `guest01` may no longer be needed | Unused account risk | Disable or remove the account if it is not required |
 
-The goal is to practice basic account and permission review in a small fictional environment.
+## Notes
 
-## Outcome
+The main focus in this section is least privilege.
 
-Unnecessary privileged or test accounts should be identified and documented clearly.
+Accounts should have only the access they need. Admin accounts should be limited and easy to explain.
+
+## Learning Connection
+
+This section helped me practice basic identity review, access control, account ownership, and least privilege thinking.
