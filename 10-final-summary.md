@@ -1,41 +1,41 @@
 # 10 - Final Summary
 
-## Capstone Summary
+## Project Summary
 
-This capstone reviewed a fictional small learning environment from a basic security perspective.
+This capstone project reviewed a small fictional learning/lab environment from a basic security perspective.
 
-The review connected several learning areas:
+The review included user accounts, access levels, network notes, sample login logs, a phishing email example, firewall rules, Python log summary, and a simple risk register.
 
-- identity and access review
-- network observation
-- authentication log analysis
-- phishing triage
-- firewall rule review
-- Python-based log summarization
-- risk documentation
+## Main Findings
 
-## What I Learned
+The main findings were:
 
-Through this capstone, I practiced connecting separate cybersecurity topics into one small review process.
+- one admin account had an unclear purpose
+- one guest account needed review
+- repeated failed login attempts appeared in the sample log
+- SSH access was allowed too broadly
+- guest access to the lab server was too open
+- a phishing email tried to collect user credentials
 
-I learned that security work is not only about finding issues. It is also about documenting them clearly, understanding their risk, and suggesting practical improvements.
+## Main Recommendations
 
-## Main Takeaway
+The main recommendations were:
 
-A small security review should be:
+- review unnecessary or unclear accounts
+- remove extra admin access if it is not needed
+- limit SSH access to trusted systems
+- review repeated failed login attempts
+- restrict guest access to internal resources
+- report and review phishing emails
 
-- scoped clearly
-- based on observable evidence
-- documented simply
-- connected to risk
-- followed by practical recommendations
+## Learning Outcome
 
-## Next Steps
+This project helped me connect different cybersecurity topics in one small review workflow.
 
-Future improvements could include:
+I practiced identity and access review, log analysis, phishing triage, firewall rule review, Python scripting, and basic risk documentation.
 
-- adding more realistic fictional sample logs
-- improving the Python helper script
-- adding clean screenshots
-- expanding the risk register
-- connecting the capstone to future cloud and identity security learning
+## Closing Note
+
+This is a fictional student capstone project.
+
+It helped me organize what I learned and turn separate security topics into one clear review.
