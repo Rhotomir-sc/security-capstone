@@ -1,13 +1,5 @@
 # Evidence
 
-This folder stores a small number of screenshots related to the capstone project.
+This folder contains supporting screenshots used throughout the Security Capstone project.
 
-The screenshots are used to show:
-
-- repository structure
-- sample log file
-- Python script output
-- risk register
-- closing summary
-
-All screenshots are based on fictional student-level project data.
+Each screenshot is referenced in the relevant markdown document.
