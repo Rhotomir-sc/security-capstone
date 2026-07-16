@@ -1,8 +1,5 @@
-2026-07-08 09:10:12 INFO user=student01 event=login_success src_ip=192.168.10.20
-2026-07-08 09:12:03 WARNING user=student02 event=login_failed src_ip=192.168.10.21
-2026-07-08 09:12:45 WARNING user=student02 event=login_failed src_ip=192.168.10.21
-2026-07-08 09:15:30 INFO user=labadmin event=login_success src_ip=192.168.10.10
-2026-07-08 09:17:10 WARNING user=testadmin event=login_failed src_ip=192.168.10.30
-2026-07-08 09:18:02 WARNING user=testadmin event=login_failed src_ip=192.168.10.30
-2026-07-08 09:20:16 INFO user=student01 event=login_success src_ip=192.168.10.20
-2026-07-08 09:22:40 INFO user=guest01 event=account_review_required src_ip=192.168.10.40
+Jul 16 09:10:12 lab-server sshd[2141]: Accepted password for admin01 from 192.168.10.20 port 51244 ssh2
+Jul 16 09:14:03 lab-server sshd[2168]: Failed password for guest01 from 192.168.10.30 port 51401 ssh2
+Jul 16 09:14:10 lab-server sshd[2168]: Failed password for guest01 from 192.168.10.30 port 51401 ssh2
+Jul 16 09:14:18 lab-server sshd[2168]: Failed password for guest01 from 192.168.10.30 port 51401 ssh2
+Jul 16 09:15:02 lab-server sshd[2180]: Accepted password for guest01 from 192.168.10.30 port 51422 ssh2
