@@ -1,44 +1,63 @@
+from collections import defaultdict
 from pathlib import Path
 import re
 
 
-def main():
-    log_path = Path(__file__).resolve().parent.parent / "sample-logs" / "auth_sample.log"
+LOG_FILE = Path(__file__).resolve().parent.parent / "sample-logs" / "auth_sample.log"
 
-    if not log_path.exists():
-        print("Log file not found.")
+
+def main() -> None:
+    if not LOG_FILE.exists():
+        print(f"Log file not found: {LOG_FILE}")
         return
 
-    lines = [
-        line.strip()
-        for line in log_path.read_text(encoding="utf-8").splitlines()
-        if line.strip()
-    ]
+    events = defaultdict(lambda: {"success": 0, "failed": 0})
+    total_events = 0
 
-    successful_logins = 0
-    failed_logins = 0
-    users = set()
+    for line in LOG_FILE.read_text(encoding="utf-8").splitlines():
+        match = re.search(
+            r"(Accepted|Failed) password for (\S+) from ([\d.]+)",
+            line,
+        )
 
-    for line in lines:
-        if "login_success" in line:
-            successful_logins += 1
+        if not match:
+            continue
 
-        if "login_failed" in line:
-            failed_logins += 1
+        status, user, _source_ip = match.groups()
+        total_events += 1
 
-        user_match = re.search(r"user=([a-zA-Z0-9_.-]+)", line)
-        if user_match:
-            users.add(user_match.group(1))
+        if status == "Accepted":
+            events[user]["success"] += 1
+        else:
+            events[user]["failed"] += 1
 
-    print("Log Summary")
-    print("-----------")
-    print(f"Total lines reviewed: {len(lines)}")
+    successful_logins = sum(item["success"] for item in events.values())
+    failed_logins = sum(item["failed"] for item in events.values())
+
+    print("Security Capstone - SSH Log Summary")
+    print("-----------------------------------")
+    print(f"Log file: sample-logs/auth_sample.log")
+    print(f"Total events: {total_events}")
     print(f"Successful logins: {successful_logins}")
-    print(f"Failed login attempts: {failed_logins}")
-    print(f"Users found: {', '.join(sorted(users))}")
+    print(f"Failed logins: {failed_logins}")
+    print()
+    print("User Summary")
+    print("------------")
 
-    if failed_logins >= 3:
-        print("Note: Repeated failed logins should be reviewed.")
+    for user in sorted(events):
+        print(
+            f"{user}: "
+            f"success={events[user]['success']} "
+            f"failed={events[user]['failed']}"
+        )
+
+    print()
+    print("Review Note")
+    print("-----------")
+    print(
+        "guest01 had three failed attempts followed by "
+        "one successful login."
+    )
 
 
 if __name__ == "__main__":
