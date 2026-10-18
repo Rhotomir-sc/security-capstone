@@ -1,5 +1,15 @@
 # Security Capstone
 
+## Start here
+
+1. [Scenario and evidence boundaries](scenario.md)
+2. [Reproduce the analysis](REPRODUCE.md)
+3. [Risk register](07-risk-register.md)
+4. [Remediation verification — planned](remediation-verification.md)
+
+The current project is a fictional assessment with runnable analysis. Live remediation is a planned extension.
+
+
 ## About the Project
 
 This repository contains a fictional small-scale security review created for learning and portfolio purposes.

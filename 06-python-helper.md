@@ -1,5 +1,8 @@
 # Python Helper
 
+The current helper calculates timestamp-ordered sequences instead of printing a fixed conclusion. [Run instructions](REPRODUCE.md). The screenshot is historical and may differ from current output.
+
+
 ## Purpose
 
 In this section, I created a small Python script to summarize the SSH authentication records in `auth_sample.log`.
