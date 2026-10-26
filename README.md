@@ -20,6 +20,16 @@ Throughout the project, I review fundamental topics such as identity and access,
 
 ---
 
+## Technical focus and evidence status
+
+The executable part of this capstone examines a **synthetic SSH authentication log** and identifies a time-bounded failed-login-then-success sequence. The Python script and unit tests are reproducible using the [run guide](REPRODUCE.md).
+
+The identity, firewall, phishing, and network sections are **scenario assessments and proposed controls**. Remediation changes and allow/deny network verification remain **planned**, as recorded in the [verification plan](remediation-verification.md). Screenshots of earlier reports are not proof of live deployment.
+
+This differs from the [Google integrated case](https://github.com/Rhotomir-sc/google-cybersecurity-portfolio-pack/tree/main/integrated-security-case), which uses fictional cloud sign-in events, web logs, and SQL. The projects exercise related analysis methods on distinct datasets.
+
+---
+
 ## Repository Structure
 
 | File | Description |
