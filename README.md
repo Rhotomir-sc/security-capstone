@@ -47,7 +47,7 @@ This differs from the [Google integrated case](https://github.com/Rhotomir-sc/go
 
 ## Evidence
 
-Project screenshots and sample files are stored in the **evidence/** directory.
+Project screenshots are explained in the [evidence index](evidence/README.md), while the SSH input fixture and runnable Python analysis are linked in the [reproduction guide](REPRODUCE.md).
 
 ---
 
