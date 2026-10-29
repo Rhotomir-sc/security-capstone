@@ -8,6 +8,8 @@ My goal was to list each risk clearly and connect it with a practical improvemen
 
 ---
 
+**Scope of status labels:** `Open` and `Review Needed` refer to unresolved risks in this **fictional teaching scenario**. They are not findings against a real employer, a live network or a production security assessment. Likelihood/impact ratings are qualitative educational judgments, not validated business metrics.
+
 ## Identified Risks
 
 | ID | Risk | Likelihood | Impact | Level | Recommended Action | Status |
